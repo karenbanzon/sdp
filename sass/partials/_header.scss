@@ -1,0 +1,27 @@
+// Header styles
+
+.siteHead {
+	width: 100%;
+	@include clearfix;
+	#brand {
+	background-color: $darkGray;
+		& > div { @include row(); }
+		.iconseal {
+			font-size: 7em;
+			color: $sdpYellow;
+		}
+	}
+	nav {
+		@include row();
+		margin-top: 20px;
+		margin-bottom: 3px;
+		border-bottom: 1px solid $platinum;
+		a {
+			padding: 10px 20px 3px 20px;
+			&:hover, &:focus {
+				border-bottom: 3px solid $ash;
+			}
+			&.active, &:active { border-bottom: 3px solid $sdpYellow; }
+		}
+	}
+}

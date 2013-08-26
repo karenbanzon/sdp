@@ -1,0 +1,36 @@
+@font-face {
+	font-family: 'sdp';
+	src:url('/fonts/sdp.eot');
+	src:url('/fonts/sdp.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/sdp.woff') format('woff'),
+		url('/fonts/sdp.ttf') format('truetype'),
+		url('/fonts/sdp.svg#sdp') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.icon { display: inline-block; }
+
+.iconseal, .iconhome, .iconpencil, .iconcheck, .iconx, .iconarrowright, .iconarrowleft, .iconarrowdown, .iconarrowup, .iconfacebook, .icontwitter, .iconpinterest, .iconyoutube {
+	font-family: 'sdp';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.iconseal:before { content: "\e000"; }
+.iconhome:before { content: "\e001"; }
+.iconpencil:before { content: "\e002"; }
+.iconcheck:before { content: "\e003"; }
+.iconx:before { content: "\e004"; }
+.iconarrowright:before { content: "\e005"; }
+.iconarrowleft:before { content: "\e006"; }
+.iconarrowdown:before { content: "\e007"; }
+.iconarrowup:before { content: "\e008"; }
+.iconfacebook:before { content: "\e009"; }
+.icontwitter:before { content: "\e00a"; }
+.iconpinterest:before { content: "\e00b"; }
+.iconsyoutube:before { content: "\e00c"; }
