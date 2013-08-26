@@ -1,0 +1,26 @@
+// Form Styles
+
+input, select, textarea, {
+	padding: 7px;
+	width: 100%;
+	border: 1px solid #ccc;
+	font-family: $copyFont;
+	font-size: 1em;
+	line-height: 1.15em;
+	&:focus {
+		@include single-box-shadow($baseYellow, 0px, 0px, 7px);
+		outline: none;
+	}
+}
+
+fieldset {
+	border: 0;
+	padding: 0;
+	margin: 20px 0;
+	.required {
+		*:after {
+			content: "*";
+			color: $cMagazineRed;
+		}
+	}
+}

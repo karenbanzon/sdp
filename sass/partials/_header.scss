@@ -9,9 +9,27 @@
 			@include row();
 			color: $sdpYellow;
 		}
+		.name {
+			float: left;
+			margin-left: 20px;
+			p {
+				color: $white;
+				font-family: $baseSerif;
+				margin: 0;
+			}
+			.greekName {
+				font-size: 2em;
+				margin-top: 28px;
+				margin-bottom: 0;
+			}
+			.englishName {
+				font-size: 1.2em;
+			}
+		}
 		.iconseal {
+			float: left;
 			font-size: 7em;
-			color: $sdpYellow;
+			color: $sdpYellow;	
 		}
 		.social {
 			float: right;

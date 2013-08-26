@@ -4,9 +4,23 @@
 	@font-face {
 		font-family: 'Roboto';
 		src: url("http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic");
+		-webkit-font-smoothing: antialiased;
 	}
 
+	@font-face {
+		font-family: 'Book Antiqua';
+		src:url('/fonts/book_antiqua.eot');
+		src:url('/fonts/book_antiqua.eot?#iefix') format('embedded-opentype'),
+			url('/fonts/book_antiqua.woff') format('woff'),
+			url('/fonts/book_antiqua.ttf') format('truetype');
+		font-weight: lighter;
+		font-style: normal;
+		-webkit-font-smoothing: antialiased;
+	}
+
+
 $baseFont: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+$baseSerif: "adobe-garamond-pro", 'Book Antiqua', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
 $copyFont: 'Roboto', Helvetica, Arial, sans-serif;
 
 	body { 

@@ -1,0 +1,23 @@
+// Pink Form Styles
+
+#pinkForm {
+	h1 { text-align: center; }
+	.qualifications {
+		@include col(6);
+		@include prepend (3);
+		@include border-radius(5px);
+		padding: 5px;
+		background-color: $baseYellow;
+		ul { display: table-cell; }
+	}
+	.form {
+		@include col(6);
+		@include prepend (3);
+		padding: 0 20px;
+		h4 {
+			padding: 0 30px;
+			text-align: center;
+		}
+
+	}
+}

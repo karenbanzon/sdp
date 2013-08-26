@@ -23,11 +23,6 @@ button, .button {
 		&:hover, &:focus { background-color: $ash + 20; }
 	}
 
-	&.yellow { 
-		background-color: $baseYellow;
-		&:hover, &:focus { background-color: $baseYellow + 20; }
-	}
-
 	&.black {
 		background-color: $darkGray;
 		&:hover, &:focus { background-color: $darkGray + 20; }
