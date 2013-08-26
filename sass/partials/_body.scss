@@ -2,4 +2,9 @@
 
 .main {
 	@include row();
+	padding: 20px;
 }
+
+
+	// Imports
+	@import 'partials/specific/homepage';

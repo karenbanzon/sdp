@@ -5,10 +5,19 @@
 	@include clearfix;
 	#brand {
 	background-color: $darkGray;
-		& > div { @include row(); }
+		& > div {
+			@include row();
+			color: $sdpYellow;
+		}
 		.iconseal {
 			font-size: 7em;
 			color: $sdpYellow;
+		}
+		.social {
+			float: right;
+			font-size: 1.5em;
+			margin-top: 30px;
+			span { padding: 10px;}
 		}
 	}
 	nav {

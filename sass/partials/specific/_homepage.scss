@@ -1,0 +1,10 @@
+// Homepage
+
+#homepage {
+	.primaryBlock {
+		text-align: center;
+		.video {
+			@include row();
+		}
+	}
+}

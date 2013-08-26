@@ -296,6 +296,55 @@ table tr:nth-child(even) {
   background: #fafafa;
 }
 
+/* line 3, ../../sass/partials/elements/_buttons.scss */
+button, .button {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  width: auto;
+  margin: 0;
+  padding: 10px 20px 11px;
+  background: #f6b71e;
+  border: none;
+  color: #fefefe !important;
+  cursor: pointer;
+  display: inline-block;
+  font: normal 14px "Roboto", Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+}
+/* line 16, ../../sass/partials/elements/_buttons.scss */
+button:hover, button:focus, .button:hover, .button:focus {
+  background: #ffcb32;
+  color: #fefefe;
+}
+/* line 21, ../../sass/partials/elements/_buttons.scss */
+button.gray, .button.gray {
+  background-color: #aaaaaa;
+}
+/* line 23, ../../sass/partials/elements/_buttons.scss */
+button.gray:hover, button.gray:focus, .button.gray:hover, .button.gray:focus {
+  background-color: #bebebe;
+}
+/* line 26, ../../sass/partials/elements/_buttons.scss */
+button.yellow, .button.yellow {
+  background-color: #f6b71e;
+}
+/* line 28, ../../sass/partials/elements/_buttons.scss */
+button.yellow:hover, button.yellow:focus, .button.yellow:hover, .button.yellow:focus {
+  background-color: #ffcb32;
+}
+/* line 31, ../../sass/partials/elements/_buttons.scss */
+button.black, .button.black {
+  background-color: #222222;
+}
+/* line 33, ../../sass/partials/elements/_buttons.scss */
+button.black:hover, button.black:focus, .button.black:hover, .button.black:focus {
+  background-color: #363636;
+}
+
 /* line 3, ../../sass/partials/_header.scss */
 .siteHead {
   width: 100%;
@@ -322,6 +371,7 @@ table tr:nth-child(even) {
   clear: both;
   width: 1140px;
   margin: 0 auto;
+  color: #f5cf1c;
 }
 /* line 50, ../../sass/partials/_grid.scss */
 .siteHead #brand > div:before, .siteHead #brand > div:after {
@@ -334,12 +384,22 @@ table tr:nth-child(even) {
 .siteHead #brand > div:after {
   clear: both;
 }
-/* line 9, ../../sass/partials/_header.scss */
+/* line 12, ../../sass/partials/_header.scss */
 .siteHead #brand .iconseal {
   font-size: 7em;
   color: #f5cf1c;
 }
-/* line 14, ../../sass/partials/_header.scss */
+/* line 16, ../../sass/partials/_header.scss */
+.siteHead #brand .social {
+  float: right;
+  font-size: 1.5em;
+  margin-top: 30px;
+}
+/* line 20, ../../sass/partials/_header.scss */
+.siteHead #brand .social span {
+  padding: 10px;
+}
+/* line 23, ../../sass/partials/_header.scss */
 .siteHead nav {
   *zoom: 1;
   clear: both;
@@ -360,15 +420,15 @@ table tr:nth-child(even) {
 .siteHead nav:after {
   clear: both;
 }
-/* line 19, ../../sass/partials/_header.scss */
+/* line 28, ../../sass/partials/_header.scss */
 .siteHead nav a {
   padding: 10px 20px 3px 20px;
 }
-/* line 21, ../../sass/partials/_header.scss */
+/* line 30, ../../sass/partials/_header.scss */
 .siteHead nav a:hover, .siteHead nav a:focus {
   border-bottom: 3px solid #aaaaaa;
 }
-/* line 24, ../../sass/partials/_header.scss */
+/* line 33, ../../sass/partials/_header.scss */
 .siteHead nav a.active, .siteHead nav a:active {
   border-bottom: 3px solid #f5cf1c;
 }
@@ -379,6 +439,7 @@ table tr:nth-child(even) {
   clear: both;
   width: 1140px;
   margin: 0 auto;
+  padding: 20px;
 }
 /* line 50, ../../sass/partials/_grid.scss */
 .main:before, .main:after {
@@ -389,6 +450,29 @@ table tr:nth-child(even) {
 }
 /* line 56, ../../sass/partials/_grid.scss */
 .main:after {
+  clear: both;
+}
+
+/* line 4, ../../sass/partials/specific/_homepage.scss */
+#homepage .primaryBlock {
+  text-align: center;
+}
+/* line 6, ../../sass/partials/specific/_homepage.scss */
+#homepage .primaryBlock .video {
+  *zoom: 1;
+  clear: both;
+  width: 1140px;
+  margin: 0 auto;
+}
+/* line 50, ../../sass/partials/_grid.scss */
+#homepage .primaryBlock .video:before, #homepage .primaryBlock .video:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+/* line 56, ../../sass/partials/_grid.scss */
+#homepage .primaryBlock .video:after {
   clear: both;
 }
 

@@ -13,6 +13,11 @@
 			<div id="brand">
 				<div>
 					<span class="icon iconseal" aria-hidden="true"></span>
+					<div class="social">
+						<span class="icon iconfacebook" aria-hidden="true"></span>
+						<span class="icon icontwitter" aria-hidden="true"></span>
+						<span class="icon iconpinterest" aria-hidden="true"></span>
+					</div>		
 				</div>
 			</div>
 			<nav>
@@ -24,7 +29,14 @@
 		</header>
 
 		<section class="main">
-			Content here
+			<div class="content" id="homepage">
+				<div class="primaryBlock">
+					<div class="video">
+						<iframe width="800" height="600" src="//www.youtube.com/embed/zAvDiVFTOnk" frameborder="0" allowfullscreen></iframe>
+					</div>
+					<a href="" class="button">Membership Qualifications <span class="icon iconarrowright"></span></a>
+				</div>
+			</div>
 		</section>
 
 		<footer class="siteFoot">
