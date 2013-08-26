@@ -1,0 +1,119 @@
+// Typographic Rules
+
+
+	// Font Face Rules For Din
+	@font-face {
+		font-family: 'Din';
+		src: url("/fonts/DINWeb.eot");
+	}
+
+	@font-face {
+		font-family: 'Din';
+		src: url("/fonts/DINWeb.woff");
+	}
+
+$baseFont: 'Din', 'Helvetica Neue', Arial sans-serif;
+$baseFont2: 'din-condensed-web','Din Condensed','Helvetica Neue', Arial, sans-serif;
+$copyFont: Helvetica, Arial, sans-serif;
+
+	body { 
+		font-family: $copyFont; 
+		font-size: 14px;
+		color: $copy; 
+		font-style: normal;
+		font-weight: 300;
+		line-height: 23px;
+	}
+
+	::selection {
+		background-color: $patBlue;
+		color: $white;
+	}
+
+	::-moz-selection {
+		background-color: $patBlue;
+		color: $white;
+	}
+
+	h1,h2,h3,h4,h5,h6 { 
+		line-height: 1em;
+		font-family: $baseFont; 
+		font-weight: normal;
+		color: $darkGray;
+		margin: 0;
+		// text-transform: uppercase;
+	}
+
+	h1 	{ font-size: 2.5em; }
+	h2 	{ font-size: 2.1em; }
+	h3 	{ font-size: 1.875em; }
+	h4 	{ font-size: 1.25em; }
+	h5 	{ font-size: 1.125em; }
+	h6	{ font-size: 1em; }
+
+	// Additional H6 styling
+	h6 { 
+		margin-bottom: 10px;
+		border-bottom: 1px dotted $platinum;
+		font-size: 1em; 
+		text-transform: uppercase;
+		text-align: left !important;
+	}
+
+	
+	p {
+		margin: 7px 0 25px 0;
+		font-family: $copyFont;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 23px;
+
+		&.intro {
+			width: 90%;
+			margin: 50px auto 30px auto;
+			font-size: 1.3em;
+			line-height: 1.5em;
+			text-align: center;
+		}
+
+		&.small {
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 1.5em;
+		}
+	}
+
+
+	blockquote {
+		font-family: $baseFont2;
+		font-size: 2.3em;
+		font-style: italic;
+		text-indent: 0px;
+		margin: 30px 40px 30px 0;
+		text-transform: uppercase;
+		line-height: 1.12em;
+		letter-spacing: -0.05em;
+
+		&:before { content: '\201C'; }
+		&:after { content: '\201D'; }
+	}
+
+	// Navigation
+	nav a {
+		font-family: $baseFont; 
+		text-transform: uppercase; 
+	}
+
+	// Smalls and captions
+	small, figcaption, caption { 
+		font-size: 0.75em; 
+		font-weight: 400;
+	}
+
+	// Footnote
+	.footnote {
+		display: block;
+		margin-bottom: 20px;
+		line-height: 2em;
+		color: $gray;
+	}
