@@ -40,8 +40,13 @@ start-webcontainers:
               httpd:alpine
 
 start-prod:
-	start-webproxy \
-	start-webcontainers \
+	.start.sh \
+	docker run -d -e VIRTUAL_HOST=your.domain.com \
+              -e LETSENCRYPT_HOST=your.domain.com \
+              -e LETSENCRYPT_EMAIL=your.email@your.domain.com \
+              --network=webproxy \
+              --name my_app \
+              httpd:alpine \
 	$(PROD_DOCKER_COMPOSE) up -d
 
 stop-prod:
