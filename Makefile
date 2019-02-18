@@ -5,7 +5,7 @@ VERSION_TAG ?= $(shell git rev-parse --short HEAD)
 
 APP_NAME = sdp-web
 DEVENV_DOCKER_COMPOSE = docker-compose -p $(APP_NAME) -f $(shell pwd)/docker-compose.yml
-PROD_DOCKER_COMPOSE = docker-compose -p $(APP_NAME) -f $(shell pwd)/docker-compose-prod.yml
+PROD_DOCKER_COMPOSE = docker-compose -p $(APP_NAME) -f $(shell pwd)/docker-compose-prd.yml
 
 BACKEND_CONTAINER = $(APP_NAME)_backend_1
 MYSQL_CONTAINER = $(APP_NAME)_rds_1
