@@ -2,8 +2,6 @@ version: "3.3"
 
 services:
   wordpress:
-    depends_on:
-      - db
     container_name: sdp_wp
     image: wordpress:latest
     restart: unless-stopped
