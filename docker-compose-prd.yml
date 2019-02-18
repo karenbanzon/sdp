@@ -1,24 +1,28 @@
 version: '3.3'
 
 services:
-   wordpress:
-     container_name: ${CONTAINER_WP_NAME}
-     image: wordpress:latest
-     restart: unless-stopped
-     volumes:
-       - ${WP_CORE}:/var/www/html
-       - ${WP_CONTENT}:/var/www/html/wp-content
-     environment:
-       WORDPRESS_DB_HOST: ${CONTAINER_DB_NAME}:3306
-       WORDPRESS_DB_NAME: ${MYSQL_DATABASE}
-       WORDPRESS_DB_USER: ${MYSQL_USER}
-       WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD}
-       WORDPRESS_TABLE_PREFIX: ${WORDPRESS_TABLE_PREFIX}
-       VIRTUAL_HOST: ${DOMAINS}
-       LETSENCRYPT_HOST: ${DOMAINS}
-       LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL} 
+  https-portal:
+    image: steveltn/https-portal
+    ports:
+      - 80:80
+      - 443:443
+    links:
+      - wordpress
+    environment:
+      - "DOMAINS=3.0.94.98 -> http://wordpress"
+#      - "PRODUCTION=true"
 
-networks:
-    default:
-       external:
-         name: ${NETWORK}
+  wordpress:
+      image: wordpress:latest
+      volumes:
+        - ./:/var/www/html
+      ports:
+        - '80:80'
+        - '443:443'
+      restart: always
+      environment:
+        WORDPRESS_DB_HOST: sdp-db.cuncngfmxyly.ap-southeast-1.rds.amazonaws.com
+        WORDPRESS_DB_USER: sdproot
+        WORDPRESS_DB_PASSWORD: upsdp1933
+        WORDPRESS_DB_NAME: sdp_db
+        WORDPRESS_TABLE_PREFIX: sdp
