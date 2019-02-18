@@ -6166,41 +6166,41 @@ function wp_privacy_delete_old_export_files() {
 	}
 }
 
-// Register People Post Type
-function people_post_type() {
+// Register Series Post Type
+function videos_post_type() {
 
 	$labels = array(
-		'name'                  => _x( 'People', 'Post Type General Name', 'anweb' ),
-		'singular_name'         => _x( 'Person', 'Post Type Singular Name', 'anweb' ),
-		'menu_name'             => __( 'People', 'anweb' ),
-		'name_admin_bar'        => __( 'People', 'anweb' ),
-		'archives'              => __( 'Item Archives', 'anweb' ),
-		'attributes'            => __( 'Item Attributes', 'anweb' ),
-		'parent_item_colon'     => __( 'Parent Item:', 'anweb' ),
-		'all_items'             => __( 'All Items', 'anweb' ),
-		'add_new_item'          => __( 'Add New Item', 'anweb' ),
-		'add_new'               => __( 'Add New', 'anweb' ),
-		'new_item'              => __( 'New Item', 'anweb' ),
-		'edit_item'             => __( 'Edit Item', 'anweb' ),
-		'update_item'           => __( 'Update Item', 'anweb' ),
-		'view_item'             => __( 'View Item', 'anweb' ),
-		'view_items'            => __( 'View Items', 'anweb' ),
-		'search_items'          => __( 'Search Item', 'anweb' ),
-		'not_found'             => __( 'Not found', 'anweb' ),
-		'not_found_in_trash'    => __( 'Not found in Trash', 'anweb' ),
-		'featured_image'        => __( 'Featured Image', 'anweb' ),
-		'set_featured_image'    => __( 'Set featured image', 'anweb' ),
-		'remove_featured_image' => __( 'Remove featured image', 'anweb' ),
-		'use_featured_image'    => __( 'Use as featured image', 'anweb' ),
-		'insert_into_item'      => __( 'Insert into item', 'anweb' ),
-		'uploaded_to_this_item' => __( 'Uploaded to this item', 'anweb' ),
-		'items_list'            => __( 'Items list', 'anweb' ),
-		'items_list_navigation' => __( 'Items list navigation', 'anweb' ),
-		'filter_items_list'     => __( 'Filter items list', 'anweb' ),
+		'name'                  => _x( 'Videos', 'Post Type General Name', 'sdp' ),
+		'singular_name'         => _x( 'Video', 'Post Type Singular Name', 'sdp' ),
+		'menu_name'             => __( 'Videos', 'sdp' ),
+		'name_admin_bar'        => __( 'Videos', 'sdp' ),
+		'archives'              => __( 'Item Archives', 'sdp' ),
+		'attributes'            => __( 'Item Attributes', 'sdp' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'sdp' ),
+		'all_items'             => __( 'All Items', 'sdp' ),
+		'add_new_item'          => __( 'Add New Item', 'sdp' ),
+		'add_new'               => __( 'Add New', 'sdp' ),
+		'new_item'              => __( 'New Item', 'sdp' ),
+		'edit_item'             => __( 'Edit Item', 'sdp' ),
+		'update_item'           => __( 'Update Item', 'sdp' ),
+		'view_item'             => __( 'View Item', 'sdp' ),
+		'view_items'            => __( 'View Items', 'sdp' ),
+		'search_items'          => __( 'Search Item', 'sdp' ),
+		'not_found'             => __( 'Not found', 'sdp' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'sdp' ),
+		'featured_image'        => __( 'Featured Image', 'sdp' ),
+		'set_featured_image'    => __( 'Set featured image', 'sdp' ),
+		'remove_featured_image' => __( 'Remove featured image', 'sdp' ),
+		'use_featured_image'    => __( 'Use as featured image', 'sdp' ),
+		'insert_into_item'      => __( 'Insert into item', 'sdp' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'sdp' ),
+		'items_list'            => __( 'Items list', 'sdp' ),
+		'items_list_navigation' => __( 'Items list navigation', 'sdp' ),
+		'filter_items_list'     => __( 'Filter items list', 'sdp' ),
 	);
 	$args = array(
-		'label'                 => __( 'Person', 'anweb' ),
-		'description'           => __( 'People in the organization', 'anweb' ),
+		'label'                 => __( 'Video', 'sdp' ),
+		'description'           => __( 'Video series', 'sdp' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom-fields' ),
 		'taxonomies'            => array( 'category', 'post_tag' ),
@@ -6209,7 +6209,7 @@ function people_post_type() {
 		'show_ui'               => true,
 		'show_in_menu'          => true,
 		'menu_position'         => 5,
-		'menu_icon'             => 'dashicons-admin-users',
+		'menu_icon'             => 'dashicons-format-video',
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
@@ -6219,46 +6219,46 @@ function people_post_type() {
 		'capability_type'       => 'page',
 		'show_in_rest'          => true,
 	);
-	register_post_type( 'people', $args );
+	register_post_type( 'videos', $args );
 
 }
-add_action( 'init', 'people_post_type', 0 );
+add_action( 'init', 'videos_post_type', 0 );
 
 // Register Events Post Type
 function events_post_type() {
 
 	$labels = array(
-		'name'                  => _x( 'Events', 'Post Type General Name', 'anweb' ),
-		'singular_name'         => _x( 'Event', 'Post Type Singular Name', 'anweb' ),
-		'menu_name'             => __( 'Events', 'anweb' ),
-		'name_admin_bar'        => __( 'Events', 'anweb' ),
-		'archives'              => __( 'Item Archives', 'anweb' ),
-		'attributes'            => __( 'Item Attributes', 'anweb' ),
-		'parent_item_colon'     => __( 'Parent Item:', 'anweb' ),
-		'all_items'             => __( 'All Items', 'anweb' ),
-		'add_new_item'          => __( 'Add New Item', 'anweb' ),
-		'add_new'               => __( 'Add New', 'anweb' ),
-		'new_item'              => __( 'New Item', 'anweb' ),
-		'edit_item'             => __( 'Edit Item', 'anweb' ),
-		'update_item'           => __( 'Update Item', 'anweb' ),
-		'view_item'             => __( 'View Item', 'anweb' ),
-		'view_items'            => __( 'View Items', 'anweb' ),
-		'search_items'          => __( 'Search Item', 'anweb' ),
-		'not_found'             => __( 'Not found', 'anweb' ),
-		'not_found_in_trash'    => __( 'Not found in Trash', 'anweb' ),
-		'featured_image'        => __( 'Featured Image', 'anweb' ),
-		'set_featured_image'    => __( 'Set featured image', 'anweb' ),
-		'remove_featured_image' => __( 'Remove featured image', 'anweb' ),
-		'use_featured_image'    => __( 'Use as featured image', 'anweb' ),
-		'insert_into_item'      => __( 'Insert into item', 'anweb' ),
-		'uploaded_to_this_item' => __( 'Uploaded to this item', 'anweb' ),
-		'items_list'            => __( 'Items list', 'anweb' ),
-		'items_list_navigation' => __( 'Items list navigation', 'anweb' ),
-		'filter_items_list'     => __( 'Filter items list', 'anweb' ),
+		'name'                  => _x( 'Events', 'Post Type General Name', 'sdp' ),
+		'singular_name'         => _x( 'Event', 'Post Type Singular Name', 'sdp' ),
+		'menu_name'             => __( 'Events', 'sdp' ),
+		'name_admin_bar'        => __( 'Events', 'sdp' ),
+		'archives'              => __( 'Item Archives', 'sdp' ),
+		'attributes'            => __( 'Item Attributes', 'sdp' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'sdp' ),
+		'all_items'             => __( 'All Items', 'sdp' ),
+		'add_new_item'          => __( 'Add New Item', 'sdp' ),
+		'add_new'               => __( 'Add New', 'sdp' ),
+		'new_item'              => __( 'New Item', 'sdp' ),
+		'edit_item'             => __( 'Edit Item', 'sdp' ),
+		'update_item'           => __( 'Update Item', 'sdp' ),
+		'view_item'             => __( 'View Item', 'sdp' ),
+		'view_items'            => __( 'View Items', 'sdp' ),
+		'search_items'          => __( 'Search Item', 'sdp' ),
+		'not_found'             => __( 'Not found', 'sdp' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'sdp' ),
+		'featured_image'        => __( 'Featured Image', 'sdp' ),
+		'set_featured_image'    => __( 'Set featured image', 'sdp' ),
+		'remove_featured_image' => __( 'Remove featured image', 'sdp' ),
+		'use_featured_image'    => __( 'Use as featured image', 'sdp' ),
+		'insert_into_item'      => __( 'Insert into item', 'sdp' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'sdp' ),
+		'items_list'            => __( 'Items list', 'sdp' ),
+		'items_list_navigation' => __( 'Items list navigation', 'sdp' ),
+		'filter_items_list'     => __( 'Filter items list', 'sdp' ),
 	);
 	$args = array(
-		'label'                 => __( 'Event', 'anweb' ),
-		'description'           => __( 'Events in the organization', 'anweb' ),
+		'label'                 => __( 'Event', 'sdp' ),
+		'description'           => __( 'Events in the organization', 'sdp' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom-fields' ),
 		'taxonomies'            => array( 'category', 'post_tag' ),
@@ -6282,41 +6282,41 @@ function events_post_type() {
 }
 add_action( 'init', 'events_post_type', 0 );
 
-// Register Members Post Type
-function members_post_type() {
+// Register Projects Post Type
+function projects_post_type() {
 
 	$labels = array(
-		'name'                  => _x( 'Members', 'Post Type General Name', 'anweb' ),
-		'singular_name'         => _x( 'Member', 'Post Type Singular Name', 'anweb' ),
-		'menu_name'             => __( 'Member orgs', 'anweb' ),
-		'name_admin_bar'        => __( 'Member orgs', 'anweb' ),
-		'archives'              => __( 'Item Archives', 'anweb' ),
-		'attributes'            => __( 'Item Attributes', 'anweb' ),
-		'parent_item_colon'     => __( 'Parent Item:', 'anweb' ),
-		'all_items'             => __( 'All Items', 'anweb' ),
-		'add_new_item'          => __( 'Add New Item', 'anweb' ),
-		'add_new'               => __( 'Add New', 'anweb' ),
-		'new_item'              => __( 'New Item', 'anweb' ),
-		'edit_item'             => __( 'Edit Item', 'anweb' ),
-		'update_item'           => __( 'Update Item', 'anweb' ),
-		'view_item'             => __( 'View Item', 'anweb' ),
-		'view_items'            => __( 'View Items', 'anweb' ),
-		'search_items'          => __( 'Search Item', 'anweb' ),
-		'not_found'             => __( 'Not found', 'anweb' ),
-		'not_found_in_trash'    => __( 'Not found in Trash', 'anweb' ),
-		'featured_image'        => __( 'Featured Image', 'anweb' ),
-		'set_featured_image'    => __( 'Set featured image', 'anweb' ),
-		'remove_featured_image' => __( 'Remove featured image', 'anweb' ),
-		'use_featured_image'    => __( 'Use as featured image', 'anweb' ),
-		'insert_into_item'      => __( 'Insert into item', 'anweb' ),
-		'uploaded_to_this_item' => __( 'Uploaded to this item', 'anweb' ),
-		'items_list'            => __( 'Items list', 'anweb' ),
-		'items_list_navigation' => __( 'Items list navigation', 'anweb' ),
-		'filter_items_list'     => __( 'Filter items list', 'anweb' ),
+		'name'                  => _x( 'Projects', 'Post Type General Name', 'sdp' ),
+		'singular_name'         => _x( 'Project', 'Post Type Singular Name', 'sdp' ),
+		'menu_name'             => __( 'Projects', 'sdp' ),
+		'name_admin_bar'        => __( 'Projects', 'sdp' ),
+		'archives'              => __( 'Item Archives', 'sdp' ),
+		'attributes'            => __( 'Item Attributes', 'sdp' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'sdp' ),
+		'all_items'             => __( 'All Items', 'sdp' ),
+		'add_new_item'          => __( 'Add New Item', 'sdp' ),
+		'add_new'               => __( 'Add New', 'sdp' ),
+		'new_item'              => __( 'New Item', 'sdp' ),
+		'edit_item'             => __( 'Edit Item', 'sdp' ),
+		'update_item'           => __( 'Update Item', 'sdp' ),
+		'view_item'             => __( 'View Item', 'sdp' ),
+		'view_items'            => __( 'View Items', 'sdp' ),
+		'search_items'          => __( 'Search Item', 'sdp' ),
+		'not_found'             => __( 'Not found', 'sdp' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'sdp' ),
+		'featured_image'        => __( 'Featured Image', 'sdp' ),
+		'set_featured_image'    => __( 'Set featured image', 'sdp' ),
+		'remove_featured_image' => __( 'Remove featured image', 'sdp' ),
+		'use_featured_image'    => __( 'Use as featured image', 'sdp' ),
+		'insert_into_item'      => __( 'Insert into item', 'sdp' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'sdp' ),
+		'items_list'            => __( 'Items list', 'sdp' ),
+		'items_list_navigation' => __( 'Items list navigation', 'sdp' ),
+		'filter_items_list'     => __( 'Filter items list', 'sdp' ),
 	);
 	$args = array(
-		'label'                 => __( 'Member', 'anweb' ),
-		'description'           => __( 'Members in the organization', 'anweb' ),
+		'label'                 => __( 'Project', 'sdp' ),
+		'description'           => __( 'Organization projects', 'sdp' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom-fields' ),
 		'taxonomies'            => array( 'category', 'post_tag' ),
@@ -6325,7 +6325,7 @@ function members_post_type() {
 		'show_ui'               => true,
 		'show_in_menu'          => true,
 		'menu_position'         => 5,
-		'menu_icon'             => 'dashicons-groups',
+		'menu_icon'             => 'dashicons-awards',
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
@@ -6335,18 +6335,18 @@ function members_post_type() {
 		'capability_type'       => 'page',
 		'show_in_rest'          => true,
 	);
-	register_post_type( 'members', $args );
+	register_post_type( 'projects', $args );
 
 }
-add_action( 'init', 'members_post_type', 0 );
+add_action( 'init', 'projects_post_type', 0 );
 
 // Register taxonomies for custom post types
 function add_taxonomies_to_custom_types() {
-	register_taxonomy_for_object_type( 'category', 'people' );
+	register_taxonomy_for_object_type( 'category', 'videos' );
 	register_taxonomy_for_object_type( 'category', 'events' );
-	register_taxonomy_for_object_type( 'category', 'members' );
-	register_taxonomy_for_object_type( 'post_tag', 'people' );
+	register_taxonomy_for_object_type( 'category', 'projects' );
+	register_taxonomy_for_object_type( 'post_tag', 'videos' );
 	register_taxonomy_for_object_type( 'post_tag', 'events' );
-	register_taxonomy_for_object_type( 'post_tag', 'members' );
+	register_taxonomy_for_object_type( 'post_tag', 'projects' );
 }
 add_action( 'init', 'add_taxonomies_to_custom_types' );
