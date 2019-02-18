@@ -28,7 +28,20 @@ build-devenv:
 mysql-devenv:
 	docker exec -it $(MYSQL_OPTIONS)
 
+start-webproxy:
+	start.sh \
+
+start-webcontainers:
+	docker run -d -e VIRTUAL_HOST=your.domain.com \
+              -e LETSENCRYPT_HOST=your.domain.com \
+              -e LETSENCRYPT_EMAIL=your.email@your.domain.com \
+              --network=webproxy \
+              --name my_app \
+              httpd:alpine
+
 start-prod:
+	start-webproxy \
+	start-webcontainers \
 	$(PROD_DOCKER_COMPOSE) up -d
 
 stop-prod:
