@@ -16,9 +16,6 @@ services:
       image: wordpress:latest
       volumes:
         - ./:/var/www/html
-      ports:
-        - '80:80'
-        - '443:443'
       restart: always
       environment:
         WORDPRESS_DB_HOST: sdp-db.cuncngfmxyly.ap-southeast-1.rds.amazonaws.com
