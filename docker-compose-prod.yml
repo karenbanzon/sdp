@@ -4,7 +4,7 @@ services:
   wordpress:
     image: wordpress:latest
     volumes:
-      - ./sdp:/var/www/html
+      - ./:/var/www/html
     ports:
       - '80:80'
     restart: always
