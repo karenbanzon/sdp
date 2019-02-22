@@ -33,17 +33,22 @@
   <div id="wrapper" class="hfeed">
     <header>
       <nav class="flex items-center justify-between flex-wrap bg-white border-b-4 border-sdpyellow p-6">
-        <div id="branding" class="flex items-center w-full sm:w-2/3">
-          <img id="logo" src="<?php echo get_template_directory_uri() ?>/assets/images/seal-gradient.svg">
-          <span id="site-title" class="font-semibold text-xl text-grey-darkest tracking-tight pl-4 pr-6">UP Sigma Delta Phi</span>
-          <a href="" class="pl-6 pt-1 text-grey hover:text-sdpyellow">About</a>
-          <a href="" class="pl-6 pt-1 text-grey hover:text-sdpyellow">Projects</a>
-          <a href="" class="pl-6 pt-1 text-grey hover:text-sdpyellow">Events</a>
+        <div id="branding" class="flex flex-wrap items-center w-3/4 sm:w-3/4 md:w-2/3">
+          <a href="<?php echo get_home_url() ?>"><img id="logo" src="<?php echo get_template_directory_uri() ?>/assets/images/seal-gradient.svg"></a>
+          <a href="<?php echo get_home_url() ?>" id="site-title" class="flex font-semibold text-xl text-grey-darkest tracking-tight pl-4 pr-6">UP Sigma Delta Phi</a>
+          <a href="<?php echo get_home_url() ?>/about/" class="block w-full lg:w-auto lg:flex pt-6 ml-3 lg:pt-1 lg:pl-6 text-grey hover:text-sdpyellow">About</a>
+          <a href="<?php echo get_home_url() ?>/projects/" class="block w-full lg:w-auto lg:flex pt-6 ml-3 lg:pt-1 lg:pl-6 text-grey hover:text-sdpyellow">Projects</a>
+          <a href="<?php echo get_home_url() ?>/events/" class="block w-full lg:w-auto lg:flex pt-6 ml-3 lg:pt-1 lg:pl-6 text-grey hover:text-sdpyellow">Events</a>
         </div>
-        <div class="text-right w-full sm:w-1/3">
+        <div class="text-right w-1/4 sm:w-1/4 md:w-1/3 hidden lg:block">
           <a class="bg-transparent hover:bg-sdpyellow text-sdpyellow font-semibold hover:text-white py-2 px-4 border border-sdpyellow rounded">
             Interested?
           </a>
+        </div>
+        <div class="flex self-start w-1/4 sm:w-1/4 md:w-1/3 block lg:hidden">
+          <button class="flex ml-auto items-center px-3 py-2 border rounded text-sdpyellow  -lighter border-sdpyellow -light hover:text-white hover:border-white">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+          </button>
         </div>
       </nav>
     </header>

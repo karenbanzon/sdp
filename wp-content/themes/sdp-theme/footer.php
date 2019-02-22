@@ -1,4 +1,4 @@
-  </section>
+    </section>
 
     <footer id="footer" class="w-full p-6 border-t-2 border-grey-light">
       <div id="copyright" class="text-center text-grey">
@@ -7,6 +7,7 @@
     </footer>
   </div>
   <?php wp_footer(); ?>
+  </div>
 </body>
 
 </html>
